@@ -10,6 +10,6 @@ The data files follow the exact same format as [SuperGLUE task files](https://su
 
 ### Structure
 
-For each SuperGLUE task `T`, the directory `FewGLUE_32dev/T` contains the 32-sample-dev file (`dev32.jsonl`), which contains 32 examples for few-shot validation.
+For each SuperGLUE task `T`, the directory `FewGLUE_32dev/T` contains the 32-sample-dev file (`dev32.jsonl`), which consists of 32 examples for few-shot validation.
 
-To perform few-shot learning under 32-dev setting, the following files are also required, including the FewGLUE train/unlabeled files (`train.jsonl`/`unlabeled.jsonl`)[[download](https://github.com/timoschick/fewglue)], the SuperGLUE dev/test files (`dev.jsonl`/`test.jsonl`)[[download](https://super.gluebenchmark.com/tasks)].
+To perform few-shot learning under 32-dev setting, the following files are also required, including the FewGLUE train files (`train.jsonl`)[[download](https://github.com/timoschick/fewglue)], and the SuperGLUE dev/test files (`dev.jsonl`/`test.jsonl`)[[download](https://super.gluebenchmark.com/tasks)].
