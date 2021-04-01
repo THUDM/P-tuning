@@ -12,7 +12,7 @@ sh scripts/rte_pt_few_shot.sh
 
 ### Data
 
-[FewGLUE_32dev](https://cloud.tsinghua.edu.cn/seafhttp/files/62141760-ba24-41f8-a66a-c367fa6b6f59/FewGLUE_32dev.tar.gz) dataset is adopted for experiments.
+The [FewGLUE_32dev](https://github.com/THUDM/P-tuning/tree/main/FewGLUE_32dev) dataset is adopted for experiments.
 [PT-Fewshot](https://github.com/THUDM/P-tuning/tree/main/PT-Fewshot/data_utils) contains utilities for loading, preprocessing and pattern-verbalizer transformation of FewGLUE_32dev data.
 
 
