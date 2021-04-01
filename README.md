@@ -5,7 +5,7 @@ A novel method to tune language models. Codes and datasets for paper [``GPT unde
 ## How to use our code
 We have released the code and datasets for LAMA and few-shot SuperGLUE (32-dev) experiments. Please check **README.md** and **requirement.txt** in the corresponding subdirectories for details.
 
-The [LAMA](https://cloud.tsinghua.edu.cn/f/21b9dcf05cc44adfad25/?dl=1) and [few-shot SuperGLUE (32-dev)](https://cloud.tsinghua.edu.cn/f/526f471aed544d248949/?dl=1) datasets are available. The LAMA dataset should be placed in ./data directory, and the SuperGLUE dataset should be placed in the ./ (project root) directory.
+The [LAMA](https://cloud.tsinghua.edu.cn/f/21b9dcf05cc44adfad25/?dl=1) and [FewGLUE_32dev](https://github.com/THUDM/P-tuning/tree/main/FewGLUE_32dev) datasets are available. The LAMA dataset should be placed in ./data directory, and the SuperGLUE dataset should be placed in the ./ (project root) directory.
 
 ## Citation
 
