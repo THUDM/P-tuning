@@ -1,7 +1,12 @@
 # P-tuning
 A novel method to tune language models. Codes and datasets for paper [``GPT understands, too''](https://arxiv.org/abs/2103.10385).
 
+[Xiao Liu*](https://scholar.google.com.hk/citations?user=VKI8EhUAAAAJ&hl=zh-CN), Yanan Zheng*, [Zhengxiao Du](https://scholar.google.com/citations?user=A8x07E0AAAAJ&hl=en), [Ming Ding](https://scholar.google.com/citations?user=Va50YzkAAAAJ&hl=en), [Yujie Qian](https://scholar.google.com/citations?user=93a-9kkAAAAJ&hl=en), [Zhilin Yang](https://scholar.google.com.hk/citations?user=7qXxyJkAAAAJ&hl=en), [Jie Tang](http://keg.cs.tsinghua.edu.cn/jietang/)
+
 ![](img/PT.png)
+
+You may be also interested in our another work GLM: [All NLP Tasks Are Generation Tasks: A General Pretraining Framework](https://github.com/THUDM/GLM)
+
 ## How to use our code
 We have released the code and datasets for LAMA and few-shot SuperGLUE (32-dev) experiments. Please check **README.md** and **requirement.txt** in the corresponding subdirectories for details.
 
