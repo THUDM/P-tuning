@@ -278,7 +278,13 @@ class RtePVP(PVP):
         text_b = self.shortenable(example.text_b.rstrip(string.punctuation))
 
         if self.pattern_id == 1:
-
+            
+            # searched patterns in fully-supervised.
+            # string_list_a = [text_a, '[SEP]', text_b, "?", "the" , self.mask]
+            # string_list_a = [text_a, '[SEP]', text_b, "?", "the" , "answer:", self.mask]
+            # string_list_a = [text_a, 'Question:', text_b, "?", "the" , self.mask]
+            
+            # few-shot
             string_list_a = [text_a, 'Question:', text_b, "?", "the", "Answer:", self.mask, "."]
             string_list_b = []
             block_flag_a = [0, 0, 0, 0, 1, 0, 0, 0]
@@ -307,7 +313,15 @@ class CbPVP(PVP):
         # switch text_a and text_b to get the correct order
         text_a = self.shortenable(example.text_a)
         text_b = self.shortenable(example.text_b)
-
+        
+        # searched patterns in fully-supervised learning
+        # string_list_a = [text_a, ' question: ', text_b, ' true, false or neither? answer:', "the", self.mask]
+        # string_list_a = [text_a,  "[SEP]", example.text_b, "?", 'the',  " answer: ", self.mask]
+        # string_list_a = [text_a,  "the",  text_b, "?",  "Answer:", self.mask]
+        # string_list_a = [text_a, 'the the', 'question:', text_b, '?', 'the the', 'answer:', self.mask]
+        # string_list_a = [text_a, "[SEP]", text_b, "?", "the", self.mask]
+        
+        # few-shot
         if self.pattern_id == 1:
 
             string_list_a =  [text_a,  "[SEP]", example.text_b, "?", 'the',  " answer: ", self.mask]
@@ -338,6 +352,18 @@ class CopaPVP(PVP):
         example.meta['choice1'], example.meta['choice2'] = choice1, choice2
         num_masks = max(len(get_verbalization_ids(c, self.wrapper.tokenizer, False)) for c in [choice1, choice2])
 
+        if question == "cause":
+            joiner = "because"
+        else:
+            joiner = "so"
+            
+        # searched patterns in fully-supervised learning
+        # string_list_a = [choice1, 'or', choice2, '?', 'the', premise, joiner, 'the', self.mask]
+        # string_list_a = [choice1, 'or', choice2, '?', premise, joiner, 'the', self.mask * num_masks]
+        # string_list_a = ['"', choice1, '" or "', choice2, '"?', 'the', premise,  'the', joiner, self.mask*num_masks]
+        # string_list_a = ['"', choice1, '" or "', choice2, '"?', premise,  , joiner, 'the', self.mask*num_masks]
+        
+        # few-shot
         if self.pattern_id == 1:
             if question == "cause":
 
@@ -384,6 +410,13 @@ class WscPVP(PVP):
         num_masks = len(get_verbalization_ids(target, self.wrapper.tokenizer, force_single_token=False)) + num_pad
         masks = self.mask * num_masks
 
+        # searched patterns in fully-supervised learning
+        # string_list_a = [text_a, "the", "'*", pronoun, "*'", "the", masks]
+        # string_list_a = [text_a, "the", "pronoun '*", pronoun, "*' refers to",  masks]
+        # string_list_a = [text_a, "the", "pronoun '*", pronoun, "*'", "the", masks]
+        # string_list_a = [text_a, "the", "pronoun '*", pronoun, "*' refers to", "the", masks]
+        
+        # few-shot
         if self.pattern_id == 1:
 
             string_list_a = [text_a, "the", "pronoun '*", pronoun, "*' refers to",  masks + '.']
@@ -426,6 +459,12 @@ class BoolQPVP(PVP):
         passage = self.shortenable(example.text_a)
         question = self.shortenable(example.text_b)
 
+        # searched patterns in fully-supervised learning
+        # string_list_a = [passage, '.', 'the', 'Question:', question, '?', 'the', 'Answer:', self.mask]
+        # string_list_a = [passage, '.', 'the', question, '?', 'the', self.mask]
+        # string_list_a = [passage, 'the', question, '?', 'the', self.mask]
+        
+        # few-shot
         if self.pattern_id == 1:
 
             string_list_a = [passage, '.', 'the', ' Question: ', question, '? Answer: ', self.mask, '.']
@@ -450,7 +489,13 @@ class MultiRcPVP(PVP):
         "0": ["No"],
         "1": ["Yes"]
     }
-
+    
+    # search patterns in fully-supervised learning
+    # string_list_a = [passage, 'Question: ', question, '?', "Is it", answer, '?', 'the', self.mask]
+    # string_list_a = [passage, 'Question: ', question, '?', "the", answer, '?', 'the', self.mask]
+    
+    
+    # few-shot
     def get_parts(self, example: InputExample) -> FilledPattern:
         passage = self.shortenable(example.text_a)
         question = example.text_b
@@ -484,8 +529,14 @@ class WicPVP(PVP):
         text_b = self.shortenable(example.text_b)
         word = "*" + example.meta['word'] + " *"
 
+        # searched patterns in fully-supervised learning
+        # string_list_a = [text_a, '[SEP]', text_b, "the" , word, '?', self.mask]
+        # string_list_a = [text_a, '[SEP]', text_b, "the" , word, '?', "the", self.mask]
+        # string_list_a = [text_a, 'the', text_b, "the" , word, '?', "the", self.mask]
+        
+        # few-shot
         if self.pattern_id == 1:
-
+            
             string_list_a = [text_a, '[SEP]', text_b , "the", word + '?', self.mask]
             string_list_b = []
             block_flag_a = [0, 0, 0, 1, 0, 0]
