@@ -17,9 +17,8 @@ The [LAMA](https://cloud.tsinghua.edu.cn/f/21b9dcf05cc44adfad25/?dl=1) and [FewG
 If you find our work useful, please cite the following paper:
 
     @article{liu2021gpt,
-      title={GPT Understands, Too}, 
-      author={Xiao Liu and Yanan Zheng and Zhengxiao Du and Ming Ding and Yujie Qian and Zhilin Yang and Jie Tang},
-      year={2021},
-      journal={arXiv preprint arXiv:2103.10385},
-      url={https://arxiv.org/abs/2103.10385}
-    }
+  title={GPT Understands, Too},
+  author={Liu, Xiao and Zheng, Yanan and Du, Zhengxiao and Ding, Ming and Qian, Yujie and Yang, Zhilin and Tang, Jie},
+  journal={arXiv preprint arXiv:2103.10385},
+  year={2021}
+}
