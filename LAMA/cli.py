@@ -127,13 +127,13 @@ class Trainer(object):
             hit1, loss = 0, 0
             for x_hs, x_ts in loader:
                 if False and self.args.extend_data:
-                    loss, _hit1 = self.model.test_extend_data(x_hs, x_ts)
+                    _loss, _hit1 = self.model.test_extend_data(x_hs, x_ts)
                 elif evaluate_type == 'Test':
-                    loss, _hit1, top10 = self.model(x_hs, x_ts, return_candidates=True)
+                    _loss, _hit1, top10 = self.model(x_hs, x_ts, return_candidates=True)
                 else:
-                    loss, _hit1 = self.model(x_hs, x_ts)
+                    _loss, _hit1 = self.model(x_hs, x_ts)
                 hit1 += _hit1
-                loss += loss.item()
+                loss += _loss.item()
             hit1 /= len(dataset)
             print("{} {} Epoch {} Loss: {} Hit@1:".format(self.args.relation_id, evaluate_type, epoch_idx,
                                                           loss / len(dataset)), hit1)
