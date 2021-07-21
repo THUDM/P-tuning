@@ -313,7 +313,7 @@ class TransformerModelWrapper:
         scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=warmup_steps, num_training_steps=t_total)
 
         embedding_optimizer = AdamW(embedding_parameters, lr=learning_rate, eps=adam_epsilon)
-        embedding_scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=warmup_steps, num_training_steps=t_total)
+        embedding_scheduler = get_linear_schedule_with_warmup(embedding_optimizer, num_warmup_steps=warmup_steps, num_training_steps=t_total)
 
         writer = SummaryWriter(log_dir=os.path.join(self.config.output_dir, "writer_logs"))
 
