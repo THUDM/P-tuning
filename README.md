@@ -19,7 +19,7 @@ If you find our work useful, please cite the following paper:
     @article{liu2021gpt,
     title={GPT Understands, Too},
     author={Liu, Xiao and Zheng, Yanan and Du, Zhengxiao and Ding, Ming and Qian, Yujie and Yang, Zhilin and Tang, Jie},
-    journal={arXiv preprint arXiv:2103.10385},
+    journal={arXiv:2103.10385},
     year={2021}
     }
 ```
