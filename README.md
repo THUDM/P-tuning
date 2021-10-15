@@ -3,11 +3,13 @@ A novel method to tune language models. Codes and datasets for paper [``GPT unde
 
 [Xiao Liu*](https://scholar.google.com.hk/citations?user=VKI8EhUAAAAJ&hl=zh-CN), [Yanan Zheng*](zheng-yanan.github.io), [Zhengxiao Du](https://scholar.google.com/citations?user=A8x07E0AAAAJ&hl=en), [Ming Ding](https://scholar.google.com/citations?user=Va50YzkAAAAJ&hl=en), [Yujie Qian](https://scholar.google.com/citations?user=93a-9kkAAAAJ&hl=en), [Zhilin Yang](https://scholar.google.com.hk/citations?user=7qXxyJkAAAAJ&hl=en), [Jie Tang](http://keg.cs.tsinghua.edu.cn/jietang/)
 
-🌟 [2021-10-15] News: P-tuning v2 is out! Check our [repo](https://github.com/THUDM/P-tuning-v2) and [paper](https://arxiv.org/abs/2110.07602).
-
 ![](img/PT.png)
 
 You may be also interested in our another work GLM: [All NLP Tasks Are Generation Tasks: A General Pretraining Framework](https://github.com/THUDM/GLM)
+
+## ❗ News 
+
+🌟 [2021-10-15] P-tuning v2 is out! Check our [repo](https://github.com/THUDM/P-tuning-v2) and [paper](https://arxiv.org/abs/2110.07602).
 
 ## How to use our code
 We have released the code and datasets for LAMA and few-shot SuperGLUE (32-dev) experiments. Please check **README.md** and **requirement.txt** in the corresponding subdirectories for details.
