@@ -1,7 +1,7 @@
 # P-tuning
 ## ❗ News 
 
-🌟 [2022-07-14] [Parameter-Efficient Prompt Tuning Makes Generalized and Calibrated Neural Text Retrievers](https://arxiv.org/pdf/2207.07087.pdf) is out! Check out [code](https://github.com/THUDM/P-tuning-v2/tree/main/PT-Retrieval).
+🌟 [2022-07-14] [Parameter-Efficient Prompt Tuning Makes Generalized and Calibrated Neural Text Retrievers](https://arxiv.org/pdf/2207.07087.pdf) is out! Check our [code](https://github.com/THUDM/P-tuning-v2/tree/main/PT-Retrieval).
 
 🌟 [2021-10-15] [P-tuning v2](https://arxiv.org/abs/2110.07602) is out! Check our [Github repo](https://github.com/THUDM/P-tuning-v2).
 
