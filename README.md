@@ -1,6 +1,8 @@
 # P-tuning
 ## ❗ News 
 
+🌟 [2022-10-06] Thrilled to present [GLM-130B: An Open Bilingual Pre-trained Model](https://arxiv.org/abs/2210.02414). It is an open-sourced LLM outperforming GPT-3 175B over various benchmarks. Get model weights and do inference on only **4 * RTX 3090 or 8 * RTX 2080 Ti** [FOR FREE](https://github.com/THUDM/GLM-130B)!
+
 🌟 [2022-07-14] [Parameter-Efficient Prompt Tuning Makes Generalized and Calibrated Neural Text Retrievers](https://arxiv.org/pdf/2207.07087.pdf) is out! Check our [code](https://github.com/THUDM/P-tuning-v2/tree/main/PT-Retrieval).
 
 🌟 [2021-10-15] [P-tuning v2](https://arxiv.org/abs/2110.07602) is out! Check our [Github repo](https://github.com/THUDM/P-tuning-v2).
